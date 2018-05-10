@@ -1,0 +1,21 @@
+<h1>RESULT</h1>
+
+<div id="score">
+
+<p>Your input: <%= @word %></p>
+
+
+
+  <% if !@english_word  %>
+  <p>Sorry but <%= @word %> does not seem to be an English word.</p>
+  <% elsif !@included %>
+  <p>Sorry but <%= @word %> can't be build out of <%= @letters %>.</p>
+  <% else %>
+  <p><strong>CONGRATULATIONS!</strong> <%= @word %> is a valid English word!</p>
+  <% end %>
+
+  </p>
+<br>
+</div>
+<br>
+<div id="play-again"><%= link_to 'Play again', '/new' %></div>
